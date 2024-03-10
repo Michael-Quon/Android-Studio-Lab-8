@@ -9,6 +9,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
+import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -37,6 +38,7 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.Mic_nav_home);
         }
     }
+
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int itemId = item.getItemId();
@@ -49,6 +51,7 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
         } else if (itemId == R.id.Mic_nav_about) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new AboutFragment()).commit();
         } else if (itemId == R.id.Mic_nav_logout) {
+            showAlertDialog(getString(R.string.name), getString(R.string.exit), true);
             Toast.makeText(this, getString(R.string.logout), Toast.LENGTH_SHORT).show();
         }
 
@@ -56,32 +59,39 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
 
+    private void showAlertDialog(String title, String message, final boolean finishActivity) {
+        new AlertDialog.Builder(this)
+                .setIcon(R.drawable.humberlogobg)
+                .setTitle(title)
+                .setMessage(message)
+                .setCancelable(false)
+                .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If Yes button is clicked, finish the activity if required
+                        if (finishActivity) {
+                            finish();
+                        }
+                    }
+                })
+                .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // If No button is clicked, dismiss the dialog
+                        dialog.dismiss();
+                    }
+                })
+                .show(); // Show the AlertDialog
+    }
+
+
+    @SuppressLint("MissingSuperCall")
     @Override
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            // If the drawer is closed, display an AlertDialog
-            new AlertDialog.Builder(this)
-                    .setIcon(R.drawable.humberlogobg) // Set a custom icon for the AlertDialog
-                    .setTitle(getString(R.string.name)) // Set the title of the AlertDialog
-                    .setMessage(R.string.exit) // Set the message of the AlertDialog
-                    .setCancelable(false) // User must not be able to dismiss the dialog without answering Yes or No
-                    .setPositiveButton(R.string.yes, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // If Yes button is clicked, exit the app
-                            finish();
-                        }
-                    })
-                    .setNegativeButton(R.string.no, new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            // If No button is clicked, dismiss the dialog
-                            dialog.dismiss();
-                        }
-                    })
-                    .show(); // Show the AlertDialog
+            showAlertDialog(getString(R.string.name), getString(R.string.exit), true);
         }
     }
 }
