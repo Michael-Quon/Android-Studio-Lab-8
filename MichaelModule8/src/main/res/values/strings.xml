@@ -12,4 +12,7 @@
     <string name="logout">Logout</string>
     <string name="name">Michael Quon</string>
     <string name="n01565129_humber_ca">N01565129@humber.ca</string>
+    <string name="exit">Do you want to exit the app?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
