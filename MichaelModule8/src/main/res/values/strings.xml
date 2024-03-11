@@ -18,4 +18,6 @@
     <string name="name_id">Michael Quon N01565129</string>
     <string name="press">Press</string>
     <string name="name_id_clicks">"Michael Quon N01565129 - Clicks: "</string>
+    <string name="settings_fragment">Settings Fragment</string>
+    <string name="access_photos">Access Photos</string>
 </resources>
