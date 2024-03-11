@@ -15,4 +15,7 @@
     <string name="exit">Do you want to exit the app?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="name_id">Michael Quon N01565129</string>
+    <string name="press">Press</string>
+    <string name="name_id_clicks">"Michael Quon N01565129 - Clicks: "</string>
 </resources>
