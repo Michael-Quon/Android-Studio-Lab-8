@@ -23,4 +23,22 @@
     <string name="permission_denied">Permission Denied</string>
     <string name="permission_allowed">Permission Allowed</string>
     <string name="pckg">package</string>
+    <string name="profile">Profile</string>
+    <string name="email">"Email: "</string>
+    <string name="id">"ID: "</string>
+    <string name="enter_id">Enter ID.</string>
+    <string name="enter_email">Enter Email.</string>
+    <string name="profile_fragment">Profile Fragment</string>
+    <string name="prefs_name">user</string>
+    <string name="prefs_checkbox">checkbox</string>
+    <string name="prefs_email">email</string>
+    <string name="prefs_id">id</string>
+    <string name="invalid_email">Invalid Email!</string>
+    <string name="enter_a_valid_id">Enter a valid ID with minimum 6 digits!</string>
+    <string name="user_input_saved">"User Input Saved: "</string>
+    <string name="blank" />
+    <string name="id_">" ID: "</string>
+    <string name="checkbox">" CheckBox: "</string>
+    <string name="checked">Checked</string>
+    <string name="unchecked">Unchecked</string>
 </resources>
