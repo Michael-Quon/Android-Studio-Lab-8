@@ -20,4 +20,7 @@
     <string name="name_id_clicks">"Michael Quon N01565129 - Clicks: "</string>
     <string name="settings_fragment">Settings Fragment</string>
     <string name="access_photos">Access Photos</string>
+    <string name="permission_denied">Permission Denied</string>
+    <string name="permission_allowed">Permission Allowed</string>
+    <string name="pckg">package</string>
 </resources>
