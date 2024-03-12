@@ -16,6 +16,11 @@ import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
 
 public class ShareFragment extends Fragment {
 
@@ -37,6 +42,11 @@ public class ShareFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_share, container, false);
+
+        String currentTime = getCurrentTimeGMT();
+        String fullName = getString(R.string.name);
+        String toastTime = getString(R.string.current_time_gmt) + currentTime + getString(R.string.dash) + fullName;
+        Toast.makeText(requireContext(), toastTime, Toast.LENGTH_LONG).show();
 
         // Initialize SharedPreferences keys using string resources
         PREFS_NAME = getString(R.string.prefs_name);
@@ -65,6 +75,15 @@ public class ShareFragment extends Fragment {
         });
 
         return view;
+    }
+
+    private String getCurrentTimeGMT() {
+        Date currentTime = new Date();
+
+        // hh:mm:ss in GMT
+        SimpleDateFormat dateFormat = new SimpleDateFormat(getString(R.string.hh_mm_ss), Locale.getDefault());
+        dateFormat.setTimeZone(TimeZone.getTimeZone(getString(R.string.gmt)));
+        return dateFormat.format(currentTime);
     }
 
     private void saveUserInput() {

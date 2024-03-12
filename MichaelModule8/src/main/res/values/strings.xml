@@ -41,4 +41,8 @@
     <string name="checkbox">" CheckBox: "</string>
     <string name="checked">Checked</string>
     <string name="unchecked">Unchecked</string>
+    <string name="current_time_gmt">"Current Time (GMT): "</string>
+    <string name="dash">" - "</string>
+    <string name="hh_mm_ss">HH:mm:ss</string>
+    <string name="gmt">GMT</string>
 </resources>
