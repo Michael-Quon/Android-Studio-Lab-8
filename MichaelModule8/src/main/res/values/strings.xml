@@ -39,8 +39,8 @@
     <string name="blank" translatable="false" />
     <string name="id_" translatable="false">" ID: "</string>
     <string name="checkbox" translatable="false">" CheckBox: "</string>
-    <string name="checked" translatable="false">Checked</string>
-    <string name="unchecked" translatable="false">Unchecked</string>
+    <string name="checked" translatable="false">True</string>
+    <string name="unchecked" translatable="false">False</string>
     <string name="current_time_gmt" translatable="false">"Current Time (GMT): "</string>
     <string name="dash" translatable="false">" - "</string>
     <string name="hh_mm_ss" translatable="false">HH:mm:ss</string>
