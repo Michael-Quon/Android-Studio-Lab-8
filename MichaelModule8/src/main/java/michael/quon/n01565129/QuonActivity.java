@@ -1,10 +1,10 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
 
-import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -91,13 +91,18 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
                 .show(); // Show the AlertDialog
     }
 
-    @SuppressLint("MissingSuperCall")
     @Override
-    public void onBackPressed() {
-        if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            drawerLayout.closeDrawer(GravityCompat.START);
-        } else {
-            showAlertDialog(getString(R.string.name), getString(R.string.exit), true);
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getAction() == KeyEvent.ACTION_UP) {
+            if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
+                drawerLayout.closeDrawer(GravityCompat.START);
+                return true;
+            } else {
+                showAlertDialog(getString(R.string.name), getString(R.string.exit), true);
+                return true; // Consumed the back button press event
+            }
         }
+        return super.onKeyUp(keyCode, event);
     }
+
 }
