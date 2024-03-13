@@ -1,56 +1,56 @@
 <!-- Michael Quon N01565129 -->
 <resources>
-    <string name="app_name">MichaelLab8</string>
-    <string name="open_nav">Open Navigation Drawer</string>
-    <string name="close_nav">Close Navigation Drawer</string>
+    <string name="app_name" translatable="false">MichaelLab8</string>
+    <string name="open_nav" translatable="false">Open Navigation Drawer</string>
+    <string name="close_nav" translatable="false">Close Navigation Drawer</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="home">Home</string>
     <string name="settings">Settings</string>
     <string name="share">Share</string>
     <string name="about_us">About Us</string>
     <string name="logout">Logout</string>
-    <string name="name">Michael Quon</string>
-    <string name="n01565129_humber_ca">N01565129@humber.ca</string>
+    <string name="name" translatable="false">Michael Quon</string>
+    <string name="n01565129_humber_ca" translatable="false">N01565129@humber.ca</string>
     <string name="exit">Do you want to exit the app?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="name_id">Michael Quon N01565129</string>
-    <string name="press">Press</string>
-    <string name="name_id_clicks">"Michael Quon N01565129 - Clicks: "</string>
-    <string name="settings_fragment">Settings Fragment</string>
-    <string name="access_photos">Access Photos</string>
-    <string name="permission_denied">Permission Denied</string>
-    <string name="permission_allowed">Permission Allowed</string>
-    <string name="pckg">package</string>
-    <string name="profile">Profile</string>
-    <string name="email">"Email: "</string>
-    <string name="id">"ID: "</string>
-    <string name="enter_id">Enter ID.</string>
-    <string name="enter_email">Enter Email.</string>
-    <string name="profile_fragment">Profile Fragment</string>
-    <string name="prefs_name">user</string>
-    <string name="prefs_checkbox">checkbox</string>
-    <string name="prefs_email">email</string>
-    <string name="prefs_id">id</string>
-    <string name="invalid_email">Invalid Email!</string>
-    <string name="enter_a_valid_id">Enter a valid ID with minimum 6 digits!</string>
-    <string name="user_input_saved">"User Input Saved: "</string>
-    <string name="blank" />
-    <string name="id_">" ID: "</string>
-    <string name="checkbox">" CheckBox: "</string>
-    <string name="checked">Checked</string>
-    <string name="unchecked">Unchecked</string>
-    <string name="current_time_gmt">"Current Time (GMT): "</string>
-    <string name="dash">" - "</string>
-    <string name="hh_mm_ss">HH:mm:ss</string>
-    <string name="gmt">GMT</string>
-    <string name="michael">Michael</string>
-    <string name="quon">Quon</string>
-    <string name="lock_orientation">Lock Orientation</string>
-    <string name="no_data">NO DATA</string>
-    <string name="counter">"Counter: "</string>
-    <string name="name_toast">", Name: "</string>
-    <string name="counterprefs">CounterPrefs</string>
-    <string name="checkboxchecked">"CheckBoxChecked: "</string>
+    <string name="name_id" translatable="false">Michael Quon N01565129</string>
+    <string name="press" translatable="false">Press</string>
+    <string name="name_id_clicks" translatable="false">"Michael Quon N01565129 - Clicks: "</string>
+    <string name="settings_fragment" translatable="false">Settings Fragment</string>
+    <string name="access_photos" translatable="false">Access Photos</string>
+    <string name="permission_denied" translatable="false">Permission Denied</string>
+    <string name="permission_allowed" translatable="false">Permission Allowed</string>
+    <string name="pckg" translatable="false">package</string>
+    <string name="profile" translatable="false">Profile</string>
+    <string name="email" translatable="false">"Email: "</string>
+    <string name="id" translatable="false">"ID: "</string>
+    <string name="enter_id" translatable="false">Enter ID.</string>
+    <string name="enter_email" translatable="false">Enter Email.</string>
+    <string name="profile_fragment" translatable="false">Profile Fragment</string>
+    <string name="prefs_name" translatable="false">user</string>
+    <string name="prefs_checkbox" translatable="false">checkbox</string>
+    <string name="prefs_email" translatable="false">email</string>
+    <string name="prefs_id" translatable="false">id</string>
+    <string name="invalid_email" translatable="false">Invalid Email!</string>
+    <string name="enter_a_valid_id" translatable="false">Enter a valid ID with minimum 6 digits!</string>
+    <string name="user_input_saved" translatable="false">"User Input Saved: "</string>
+    <string name="blank" translatable="false" />
+    <string name="id_" translatable="false">" ID: "</string>
+    <string name="checkbox" translatable="false">" CheckBox: "</string>
+    <string name="checked" translatable="false">Checked</string>
+    <string name="unchecked" translatable="false">Unchecked</string>
+    <string name="current_time_gmt" translatable="false">"Current Time (GMT): "</string>
+    <string name="dash" translatable="false">" - "</string>
+    <string name="hh_mm_ss" translatable="false">HH:mm:ss</string>
+    <string name="gmt" translatable="false">GMT</string>
+    <string name="michael" translatable="false">Michael</string>
+    <string name="quon" translatable="false">Quon</string>
+    <string name="lock_orientation" translatable="false">Lock Orientation</string>
+    <string name="no_data" translatable="false">NO DATA</string>
+    <string name="counter" translatable="false">"Counter: "</string>
+    <string name="name_toast" translatable="false">", Name: "</string>
+    <string name="counterprefs" translatable="false">CounterPrefs</string>
+    <string name="checkboxchecked" translatable="false">"CheckBoxChecked: "</string>
 </resources>
