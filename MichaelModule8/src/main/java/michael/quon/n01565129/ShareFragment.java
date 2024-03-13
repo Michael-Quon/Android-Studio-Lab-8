@@ -102,6 +102,12 @@ public class ShareFragment extends Fragment {
             if (!idValid) {
                 idEditText.setError(getString(R.string.enter_a_valid_id));
             }
+
+            emailEditText.getText().clear();
+            idEditText.getText().clear();
+            emailEditText.setError(getString(R.string.invalid_email));
+            idEditText.setError(getString(R.string.enter_a_valid_id));
+
             return; // Exit if any field is invalid
         }
 
