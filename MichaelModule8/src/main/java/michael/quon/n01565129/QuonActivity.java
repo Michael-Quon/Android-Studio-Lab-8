@@ -1,6 +1,13 @@
 // Michael Quon N01565129
 package michael.quon.n01565129;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -9,11 +16,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import android.annotation.SuppressLint;
-import android.content.DialogInterface;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class QuonActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -23,6 +25,7 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar); //Ignore red line errors
         setSupportActionBar(toolbar);
@@ -37,6 +40,10 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
             navigationView.setCheckedItem(R.id.Mic_nav_home);
         }
+        SharedPreferences sharedPreferences = getSharedPreferences(getString(R.string.prefs_name), MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear(); // Clear all data
+        editor.apply();
     }
 
     @Override
@@ -83,7 +90,6 @@ public class QuonActivity extends AppCompatActivity implements NavigationView.On
                 })
                 .show(); // Show the AlertDialog
     }
-
 
     @SuppressLint("MissingSuperCall")
     @Override

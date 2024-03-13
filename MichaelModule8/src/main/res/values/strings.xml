@@ -45,4 +45,12 @@
     <string name="dash">" - "</string>
     <string name="hh_mm_ss">HH:mm:ss</string>
     <string name="gmt">GMT</string>
+    <string name="michael">Michael</string>
+    <string name="quon">Quon</string>
+    <string name="lock_orientation">Lock Orientation</string>
+    <string name="no_data">NO DATA</string>
+    <string name="counter">"Counter: "</string>
+    <string name="name_toast">", Name: "</string>
+    <string name="counterprefs">CounterPrefs</string>
+    <string name="checkboxchecked">"CheckBoxChecked: "</string>
 </resources>

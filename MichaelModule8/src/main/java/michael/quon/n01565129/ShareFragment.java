@@ -93,14 +93,15 @@ public class ShareFragment extends Fragment {
         boolean emailValid = isValidEmail(email);
         boolean idValid = !TextUtils.isEmpty(id) && id.length() >= 6;
 
-        // Set error messages based on validation results
-        if (!emailValid && !idValid) {
-            emailEditText.getText().clear();
-            idEditText.getText().clear();
-
-            emailEditText.setError(getString(R.string.invalid_email));
-            idEditText.setError(getString(R.string.enter_a_valid_id));
-
+        // Check if both email and ID are valid
+        if (!emailValid || !idValid) {
+            // Show error messages for invalid fields
+            if (!emailValid) {
+                emailEditText.setError(getString(R.string.invalid_email));
+            }
+            if (!idValid) {
+                idEditText.setError(getString(R.string.enter_a_valid_id));
+            }
             return; // Exit if any field is invalid
         }
 
@@ -112,7 +113,7 @@ public class ShareFragment extends Fragment {
         editor.putString(PREFS_ID, id);
         editor.apply();
 
-        // user input in toast
+        // User input in toast
         String toastMessageBuilder = getString(R.string.email) + email +
                 getString(R.string.id_) + id +
                 getString(R.string.checkbox) + (checkBox.isChecked() ? getString(R.string.checked) : getString(R.string.unchecked));
@@ -123,6 +124,7 @@ public class ShareFragment extends Fragment {
         // Clear fields
         clearFields();
     }
+
 
     private void clearFields() {
         emailEditText.getText().clear();
